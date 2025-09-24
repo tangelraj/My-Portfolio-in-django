@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Skills - Angel Raj</title>
+  <link rel="stylesheet" href="{% static 'main/style.css' %}">
+</head>
+<body>
+
+<header>
+  <h1>Skills</h1>
+</header>
+
+<nav>
+  <a href="{% url 'index' %}">Home</a>
+  <a href="{% url 'education' %}">Education</a>
+  <a href="{% url 'skills' %}">Skills</a>
+  <a href="{% url 'experience' %}">Experience</a>
+  <a href="{% url 'contact' %}">Contact</a>
+  <a href="{% url 'github' %}">GitHub</a>
+</nav>
+
+<div class="container">
+  <h3>Technical Skills</h3>
+  <table border="1">
+    <tr>
+    <th>Skills</th>
+    <th>Known</th>
+    </tr>
+    <tr>
+    <td>ASP.Net</td>
+    <td>25%</td></tr>
+    <tr>
+    <td>HTML</td>
+    <td>20%</td>
+    </tr>
+    <tr><td>MS Office(Word, Excel,Powerpoint)</td>
+    <td>40%</td>
+    </tr>
+  </table>
+
+  <h3>Customer Service Skills</h3>
+  <ul>
+    <li>Communication & interpersonal skills</li>
+    <li>Problem-solving and active listening</li>
+  </ul>
+</div>
+
+</body>
+</html>

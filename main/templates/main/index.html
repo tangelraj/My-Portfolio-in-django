@@ -1,0 +1,61 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Angel Raj Portfolio</title>
+  <link rel="stylesheet" href="{% static 'main/style.css' %}">
+  <style>
+    header{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .one{
+      display: flex;
+      flex-direction: column;
+    }
+    
+  </style>
+</head>
+<body>
+
+<header>
+  <img style="border-radius: 50%; width: 200px; height: 200px;" src="{% static 'main/my photo.jpg' %}">
+  <div class="one">
+  <h1>Angel Raj.T</h1>
+  <p>Primary Computer Teacher | Customer Service Associate</p>
+  </div>
+  <a href="RESUME1 (1).docx" download>
+  <button style="background-color: #007BFF; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">
+    <i class="fas"></i> My Resume
+  </button>
+</a>
+</header>
+
+<nav>
+  <a href="{% url 'index' %}">Home</a>
+  <a href="{% url 'education' %}">Education</a>
+  <a href="{% url 'skills' %}">Skills</a>
+  <a href="{% url 'experience' %}">Experience</a>
+  <a href="{% url 'contact' %}">Contact</a>
+  <a href="{% url 'github' %}">GitHub</a>
+</nav>
+
+<div class="container">
+  <h2>About Me</h2>
+  <p>Hi, I’m Angel Raj: full-stack web & app developer. I can conjure a website or app from nothing into existence, fully formed. I specialize in manipulating the very fabric of the web, its raw materials of HTML, CSS. </p>
+  <p>I can plan, design, build, launch, and maintain a website myself—did I mention that I build mobile apps too.With every project, I strive to learn something new. Whether trying out new cutting-edge CSS features, optimizing part of my workflow. I am always learning-by-doing. I’m a chronic tinkerer.</p>
+</div>
+<footer>
+  <p>&copy; 2025 Angel Raj. All rights reserved.</p>
+  <p>Connect with me on 
+    <a href="https://www.linkedin.com/in/angel-raj-881a7426a" target="_blank">LinkedIn</a>
+    |
+    <a href="https://github.com/tangelraj">GitHub</a>
+  </p>
+</footer>
+</body>
+</html>

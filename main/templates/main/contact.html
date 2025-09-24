@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact - Angel Raj</title>
+  <link rel="stylesheet" href="{% static 'main/style.css' %}">
+</head>
+<body>
+
+<header>
+  <h1>Contact</h1>
+</header>
+
+<nav>
+  <a href="{% url 'index' %}">Home</a>
+  <a href="{% url 'education' %}">Education</a>
+  <a href="{% url 'skills' %}">Skills</a>
+  <a href="{% url 'experience' %}">Experience</a>
+  <a href="{% url 'contact' %}">Contact</a>
+</nav>
+
+<div class="container">
+  <p><strong>Email:</strong> tangelraj@gmail.com</p>
+  <p><strong>Phone:</strong> 8792694177</p>
+  <p><strong>Address:</strong> #25, Shilpa Cottage, Chithra Layout, Attur Layout, Yelahanka, Bangalore, Karnataka - 560064</p>
+  <p><strong>Languages:</strong> English, Tamil, Kannada, Malayalam (spoken)</p>
+
+  <form method="POST" action="{% url 'contact' %}">
+    {% csrf_token %}
+    Name:<input type="text" name="name" required><br><br>
+    Email:<input type="email" name="email" required><br><br>
+    Message:<textarea name="message" rows="4" required></textarea><br><br>
+    <button type="submit">Submit</button>
+  </form>
+
+  {% if success %}
+    <p style="color: green; font-weight:bold; margin-top:10px;">{{ success }}</p>
+  {% endif %}
+</div>
+
+<footer>
+  <p>Connect with me on 
+    <a href="https://www.linkedin.com/in/angel-raj-881a7426a" target="_blank">LinkedIn</a>
+    |
+    <a href="https://github.com/tangelraj">GitHub</a>
+  </p>
+</footer>
+
+</body>
+</html>

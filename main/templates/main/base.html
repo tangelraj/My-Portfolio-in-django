@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="{% static 'main/style.css' %}">
+</head>
+<body>
+  <header>
+    <h1>My Portfolio</h1>
+  </header>
+
+  <nav>
+    <a href="{% url 'index' %}">Home</a>
+    <a href="{% url 'contact' %}">Contact</a>
+    <a href="{% url 'education' %}">Education</a>
+    <a href="{% url 'experience' %}">Experience</a>
+    <a href="{% url 'skills' %}">Skills</a>
+    <a href="{% url 'github' %}">GitHub</a>
+  </nav>
+
+  <div class="container">
+    {% block content %}{% endblock %}
+  </div>
+
+  <footer>
+    <p>© 2025 My Portfolio</p>
+  </footer>
+</body>
+</html>

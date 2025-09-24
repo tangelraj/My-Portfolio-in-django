@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Education - Angel Raj</title>
+  <link rel="stylesheet" href="{% static 'main/style.css' %}">
+  <style>
+    p{
+        border-radius: 5px;
+        border-style: groove;width: 400px;
+        word-spacing: 5px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Education</h1>
+</header>
+
+<nav>
+  <a href="{% url 'index' %}">Home</a>
+  <a href="{% url 'education' %}">Education</a>
+  <a href="{% url 'skills' %}">Skills</a>
+  <a href="{% url 'experience' %}">Experience</a>
+  <a href="{% url 'contact' %}">Contact</a>
+  <a href="{% url 'github' %}">GitHub</a>
+</nav>
+
+<div class="container">
+    <p><strong>Python Fullstack</strong> in VTS</p>
+    <p><strong>M.Sc in Computer Science</strong>, M.S. University, 70% (2013–2015)</p>
+    <p><strong>B.Sc in Computer Science</strong>, Annai Velankanni College, 69.5% (2009–2012)</p>
+    <p><strong>Higher Secondary</strong>, LMS Girls Higher Secondary school, 61.83%</p>
+  </ul>
+</div>
+
+</body>
+</html>

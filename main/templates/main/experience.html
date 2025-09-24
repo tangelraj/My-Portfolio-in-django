@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Experience - Angel Raj</title>
+  <link rel="stylesheet" href="{% static 'main/style.css' %}">
+  <style>
+    article{
+        border-radius: 5px;
+        border-style: groove;
+        text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Experience</h1>
+</header>
+
+<nav>
+  <a href="{% url 'index' %}">Home</a>
+  <a href="{% url 'education' %}">Education</a>
+  <a href="{% url 'skills' %}">Skills</a>
+  <a href="{% url 'experience' %}">Experience</a>
+  <a href="{% url 'contact' %}">Contact</a>
+  <a href="{% url 'github' %}">GitHub</a>
+</nav>
+
+<div class="container">
+  <h3>My Projects</h3>
+  <article>
+    <h2>Project-1</h2>
+    <h3>Flight Reservation System</h3>
+    <p>This project I did front end in ASP.NET. Back end MS-Access</p>
+  </article><br><br>
+<article>
+    <h2>Project-2</h2>
+    <h3>Secure File Uploading</h3>
+    <p>This project I did front end in ASP.NET. Back end MY-SQL</p>
+</article>
+</body>
+</html>
